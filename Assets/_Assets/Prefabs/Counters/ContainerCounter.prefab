@@ -55,8 +55,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6790052913275783978}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &7389700067187996610 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 6430170536613434216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6790052913275783978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7389700067187996610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43b5eb6f7c99c844cae9240456cafa5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ContainerCounterVisual
+  containerCounter: {fileID: 6177704474515629039}
 --- !u!4 &7389700067187996611 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
@@ -145,8 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0d4d97d1590b749ae04c9abc870dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ContainerCounter
-  kitchenObjectSO: {fileID: 11400000, guid: d13e90387b5942844ae75370a85dad47, type: 2}
   counterTopPoint: {fileID: 8760963440054198004}
+  kitchenObjectSO: {fileID: 11400000, guid: d13e90387b5942844ae75370a85dad47, type: 2}
 --- !u!4 &8109455014117088542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1811895811702675820, guid: 8ad671577adc71d4ba0fce140a5506fd, type: 3}
@@ -259,13 +280,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1a0afd856a35421469b28b916116fd9c, type: 2}
     m_RemovedComponents:
     - {fileID: 6289625630049244101, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5261771210811040880, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4589716710238282922, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3255295330969344556}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+--- !u!1 &369150317246264070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8143070647044102886, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 8367270146835147232}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1758014898699410575 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7816906318471787887, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
@@ -288,10 +315,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f660c4bd99e0e2408a79235ffa51066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedCounterVisual
-  clearCounter: {fileID: 0}
-  visualGameObject: {fileID: 1758014898699410575}
+  baseCounter: {fileID: 6177704474515629039}
+  visualGameObjectArray:
+  - {fileID: 1758014898699410575}
+  - {fileID: 369150317246264070}
+  - {fileID: 8140379929009284843}
+  - {fileID: 8463062727133113613}
 --- !u!4 &5453701756393065803 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 8367270146835147232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8140379929009284843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 353237590725857035, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
+  m_PrefabInstance: {fileID: 8367270146835147232}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8463062727133113613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 102550813385737453, guid: 9a9137fa2b035d34e881701d2c178192, type: 3}
   m_PrefabInstance: {fileID: 8367270146835147232}
   m_PrefabAsset: {fileID: 0}

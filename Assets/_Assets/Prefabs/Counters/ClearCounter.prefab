@@ -267,8 +267,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f660c4bd99e0e2408a79235ffa51066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelectedCounterVisual
-  clearCounter: {fileID: 5310492945806761995}
-  visualGameObject: {fileID: 310764366169112293}
+  baseCounter: {fileID: 5310492945806761995}
+  visualGameObjectArray:
+  - {fileID: 310764366169112293}
 --- !u!4 &5633446256454654209 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4589716710238282923, guid: 0004cb1e11ad014419b943c7da960724, type: 3}
