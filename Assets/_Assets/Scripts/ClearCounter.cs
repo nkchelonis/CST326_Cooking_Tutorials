@@ -48,3 +48,4 @@ public class ClearCounter : MonoBehaviour, IKitchenObjectParent
         return kitchenObject != null;
     }
 }
+
