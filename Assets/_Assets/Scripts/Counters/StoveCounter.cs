@@ -92,7 +92,7 @@ public class StoveCounter : BaseCounter, IHasProgress
                     break;
             }
         }
-        Debug.Log(state);
+        //Debug.Log(state);
         
     }
     public override void Interact(Player player)
@@ -128,6 +128,23 @@ public class StoveCounter : BaseCounter, IHasProgress
             if (player.HasKitchenObject())
             {
                 //player is carrying something
+                if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
+                {
+                    //player carrying a plate
+                    if (plateKitchenObject.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        GetKitchenObject().DestroySelf();
+                        state = State.Idle;
+                        OnStateChanged?.Invoke(this, new OnStateChangedEventArgs()
+                        {
+                            state = this.state
+                        });
+                        OnProgressChanged?.Invoke(this,new IHasProgress.OnProgressChangedEventArgs()
+                        {
+                            progressNormalized = 0f
+                        });
+                    }
+                }
             }
             else
             {
