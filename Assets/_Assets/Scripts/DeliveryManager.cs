@@ -8,6 +8,8 @@ public class DeliveryManager : MonoBehaviour
 
     public event EventHandler OnRecipeSpawned;
     public event EventHandler OnRecipeCompleted;
+    public event EventHandler OnRecipeSuccess;
+    public event EventHandler OnRecipeFailed;
     
     public static DeliveryManager Instance { get; private set; }
     [SerializeField] private RecipeListSO recipeListSO;
@@ -79,9 +81,9 @@ public class DeliveryManager : MonoBehaviour
                 if (plateContentsMatchRecipe)
                 {
                     //player delivered correct recipe
-                    Debug.Log("Player delivered correct recipe");
+                    //Debug.Log("Player delivered correct recipe");
                     OnRecipeCompleted?.Invoke(this, EventArgs.Empty);
-                    
+                    OnRecipeSuccess?.Invoke(this, EventArgs.Empty);
                     waitingRecipeSOList.RemoveAt(i);
                     return;
                 }
@@ -90,8 +92,8 @@ public class DeliveryManager : MonoBehaviour
         
         //No Matches found
         //player did not deliver correct recipe
-        Debug.Log("Player delivered invalid recipe");
-        
+        //Debug.Log("Player delivered invalid recipe");
+        OnRecipeFailed?.Invoke(this, EventArgs.Empty);
     }
 
     public List<RecipeSO> GetWaitingRecipeSOList()
